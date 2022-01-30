@@ -39,7 +39,7 @@ export default (requestData, id = 0) => {
             'string.base': `password should be a type of 'text'`,
             'string.min' : `password length must be at least 8 characters`
         }),
-        role_id: Joi.number().min(1).required().messages({
+        role_id: Joi.string().allow('').messages({
             'number.base' : `role id should be a type of 'number'`,
             'number.empty': `role id cannot be an empty field`,
             'number.min'  : `role id length must be at least 1 characters`,

@@ -21,7 +21,7 @@ app.use(fileUpload({
 }));
 
 app.use(cors());
-app.use(apiRouter);
+app.use('/admin',apiRouter);
 
 app.use("/public", express.static(path.join(__dirname, 'public')));
 
